@@ -3,8 +3,8 @@
 	class="beautypress-header-section beautypress-version-1 beautypress-extra-css menu-skew bg-color-purple header-height-calc-minus navbar-fixed" id="lb-header">
 	<div class="container">
 		<div class="beautypress-logo-wraper">
-			<a href="index.html" class="beautypress-logo beautypress-version-2  beautypress-version-4">
-				<img src="theme/img/logo-v1-1.png" alt="">
+			<a href="index.html" class="beautypress-logo beautypress-version-2  beautypress-version-4 lb-logo">
+				<img src="logo2.png" alt="">
 			</a>
 		</div><!-- .beautypress-logo-wraper END -->
 	</div>

@@ -2,6 +2,19 @@
 	display: none;
 }
 
+#lb-header .lb-logo:before{
+	content: none;
+}
+
+#lb-header .lb-logo img{
+	width: 110px;
+}
+
+#lb-header .lb-logo{
+	box-shadow: none;
+}
+
+
 @media (min-width: 992px) and (max-width: 1199px){
   
 }
@@ -16,7 +29,7 @@
 	}
 
 	#lb-mobile-header nav {
-		background-color: green;
+		background-color: var(--color-purple) !important;
 	}
 
 	#lb-mobile-header nav button {
