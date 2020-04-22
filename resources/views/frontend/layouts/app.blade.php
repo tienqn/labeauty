@@ -50,7 +50,39 @@
         @stack('after-styles')
     </head>
     <body>
-		@yield('content')
+
+		<!--[if lt IE 8]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+		<!-- Prelaoder -->
+		<!-- <div id="preloader">
+			<div class="preloader-window left-window"></div>
+			<div class="preloader-window right-window"></div>
+			<div class="preloader-content">
+				<img src="theme/img/prelaoder-logo.png" alt="">
+				<h2>Beautypress</h2>
+			</div>
+			<div class="spinner-block">
+				<div class="spinner-eff spinner-eff-3">
+					<div class="circle circle-1"></div>
+					<div class="circle circle-2"></div>
+					<div class="circle circle-3"></div>
+				</div>
+			</div>
+			<div class="preloader-cancel-btn-wraper">
+				<a href="#" id="preloader-cancel-btn" class="xs-btn round-btn bg-color-pink box-shadow-btn">cancel preloader
+					<span></span></a>
+			</div>
+		</div> -->
+		<!-- Prelaoder end -->
+		<main class="xs-main-content">
+			@include('frontend.includes.nav')
+			@include('frontend.includes.mobile_nav')
+			
+
+			@yield('content')
+		</main>
 
         <!-- Scripts -->
         @stack('before-scripts')

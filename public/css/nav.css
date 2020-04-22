@@ -1,0 +1,38 @@
+#lb-mobile-header {
+	display: none;
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+  
+}
+
+@media (max-width: 991px) {
+	#lb-header {
+		display: none;
+	}
+
+	#lb-mobile-header {
+		display: inherit;
+	}
+
+	#lb-mobile-header nav {
+		background-color: green;
+	}
+
+	#lb-mobile-header nav button {
+		border: inherit;
+	}
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 320px) {
+	
+}
