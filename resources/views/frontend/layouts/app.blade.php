@@ -13,35 +13,62 @@
         <meta name="author" content="@yield('meta_author', 'Anthony Rappa')">
         @yield('meta')
 
-        {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
         @stack('before-styles')
 
         <!-- Check if the language is set to RTL, so apply the RTL layouts -->
         <!-- Otherwise apply the normal LTR layouts -->
-        {{ style(mix('css/frontend.css')) }}
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700%7CNiconne" rel="stylesheet">
+		<link rel="icon" type="image/png" href="favicon.ico">
+
+		<!-- Bootstrap.css -->
+		<link rel="stylesheet" href="theme/css/bootstrap.min.css">
+		<!-- Date pixker -->
+		<link rel="stylesheet" href="theme/css/bootstrap-datepicker.min.css">
+		<!-- Font awesome -->
+		<link rel="stylesheet" href="theme/css/font-awesome.min.css">
+		<!-- XS Icon -->
+		<link rel="stylesheet" href="theme/css/xs-icon.css">
+		<!-- Owl slider -->
+		<link rel="stylesheet" href="theme/css/owl.carousel.min.css">
+		<!-- theme switcher -->
+		<link rel="stylesheet" href="theme/css/themeSwither.css">
+		<!-- Isotope -->
+		<link rel="stylesheet" href="theme/css/isotope.css">
+		<!-- magnific-popup -->
+		<link rel="stylesheet" href="theme/css/magnific-popup.css">
+		<!--For Plugins external css-->
+		<link rel="stylesheet" href="theme/css/plugins.css" />
+
+		<!--Theme custom css -->
+		<link rel="stylesheet" href="theme/css/style.css">
+
+		<!--Theme Responsive css-->
+		<link rel="stylesheet" href="theme/css/responsive.css" />
+
+		<link rel="stylesheet" href="css/labeauty.css" />
 
         @stack('after-styles')
     </head>
     <body>
-        @include('includes.partials.read-only')
-
-        <div id="app">
-            @include('includes.partials.logged-in-as')
-            @include('frontend.includes.nav')
-
-            <div class="container">
-                @include('includes.partials.messages')
-                @yield('content')
-            </div><!-- container -->
-        </div><!-- #app -->
+		@yield('content')
 
         <!-- Scripts -->
         @stack('before-scripts')
-        {!! script(mix('js/manifest.js')) !!}
-        {!! script(mix('js/vendor.js')) !!}
-        {!! script(mix('js/frontend.js')) !!}
+        <script src="theme/js/jquery-3.2.1.min.js"></script>
+		<script src="theme/js/plugins.js"></script>
+		<script src="theme/js/bootstrap.min.js"></script>
+		<script src="theme/js/bootstrap-datepicker.min.js"></script>
+		<script src="theme/js/isotope.pkgd.min.js"></script>
+		<script src="theme/js/jquery.ajaxchimp.min.js"></script>
+		<script src="theme/js/owl.carousel.min.js"></script>
+		<script src="theme/js/jquery.magnific-popup.min.js"></script>
+		<script src="theme/js/appear.js"></script>
+		<script src="theme/js/spectragram.min.js"></script>
+		<script src="theme/js/themeSwither.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyCy7becgYuLwns3uumNm6WdBYkBpLfy44k"></script>
+		<script src="theme/js/main.js"></script>
+		<script src="js/labeauty.js"></script>
         @stack('after-scripts')
 
-        @include('includes.partials.ga')
     </body>
 </html>

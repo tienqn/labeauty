@@ -1,0 +1,39 @@
+.beautypress-main-header nav li a {
+    padding: 7px 13.5px;
+}
+
+.nav-menu li.first a{
+	padding-left: 0;
+}
+
+@font-face {
+	font-family: 'UVNHuongQueNang';
+	src: url('../fonts/unicode.display.UVNHuongQue_N.TTF') format('truetype');
+  }
+
+.slogan {
+	color: var(--color-text-main);
+	font-family: 'UVNHuongQueNang';
+}
+
+.sub-slogan{
+	font-size: 2rem;
+}
+
+.nav-menus-wrapper{
+	padding-right: 7%;
+}
+
+.book-app{
+	margin-top: 19px;
+	border-radius: 3em;
+	background: var(--color-text-main);
+	border-color: var(--color-text-main);
+	font-weight: 600;
+	padding: 10px;
+	color: #fff;
+}
+
+.book-app img{
+	margin-right: 5px;
+}
