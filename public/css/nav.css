@@ -20,6 +20,11 @@
 	color: var(--color-white);
 }
 
+#lb-mobile-header .navbar-toggler-icon{
+	background-image: none;
+	width: 30px;
+}
+
 /* ==== */
 
 #lb-header .lb-logo:before{
@@ -72,6 +77,7 @@
 		position: fixed;
 		top: 0;
 		z-index: 3;
+		width: 100%;
 	}
 
 	#lb-mobile-header nav {
@@ -93,7 +99,7 @@
 	}
 
 	#lb-nav-bottom .contact {
-		padding: 20px;
+		padding: 10px;
 	}
 	/* === */
 
@@ -126,7 +132,15 @@
 	}
 
 	#lb-nav-bottom .contact .contact-ico {
-		width: 30px;
+		width: 25px;
+	}
+
+	#lb-nav-bottom .information {
+		font-size: 12px;
+	}
+
+	#lb-nav-bottom .information .help{
+		margin-bottom: 10px;
 	}
 
 }

@@ -1,7 +1,14 @@
-(function ($) {
-	"use strict";
-	$('#lb-mobile-header .navbar-toggler').click(function () {
-		$(this).toggleClass('open');
-		$('.navbar-collapse').slideToggle();
-	});
-})(jQuery);
+
+document.write('<script src="theme/js/jquery-3.2.1.min.js"></script>');
+document.write('<script src="theme/js/plugins.js"></script>');
+document.write('<script src="theme/js/bootstrap.min.js"></script>');
+document.write('<script src="theme/js/bootstrap-datepicker.min.js"></script>');
+document.write('<script src="theme/js/isotope.pkgd.min.js"></script>');
+document.write('<script src="theme/js/jquery.ajaxchimp.min.js"></script>');
+document.write('<script src="theme/js/owl.carousel.min.js"></script>');
+document.write('<script src="theme/js/jquery.magnific-popup.min.js"></script>');
+document.write('<script src="theme/js/appear.js"></script>');
+document.write('<script src="theme/js/spectragram.min.js"></script>');
+document.write('<script src="theme/js/themeSwither.js"></script>');
+document.write('<script src="theme/js/main.js"></script>');
+document.write('<script src="js/main.js"></script>');
