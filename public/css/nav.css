@@ -36,6 +36,12 @@
 
 /* ==== */
 
+#lb-nav-bottom {
+	display: none;
+}
+
+/* ==== */
+
 .lb-icon {
 	width: 25px;
     margin-right: 10px;
@@ -72,6 +78,21 @@
 	#lb-mobile-header nav button {
 		border: inherit;
 	}
+
+	/* === */
+	#lb-nav-bottom {
+		width: 100%;
+		display: block;
+		position: fixed;
+		bottom: 0;
+		z-index: 2;
+		background-color: var(--color-white);
+	}
+
+	#lb-nav-bottom .contact {
+		padding: 20px;
+	}
+	/* === */
 
 }
 

@@ -83,6 +83,7 @@
 
 			@yield('content')
 		</main>
+		@include('frontend.includes.mobile_nav_bottom')
 
         <!-- Scripts -->
         @stack('before-scripts')
