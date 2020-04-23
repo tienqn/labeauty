@@ -14,6 +14,15 @@
 	box-shadow: none;
 }
 
+.lb-icon {
+	width: 25px;
+    margin-right: 10px;
+}
+
+.lb-slogan {
+	font-size: 30px;
+    padding: 10px 10px 0 0;
+}
 
 @media (min-width: 992px) and (max-width: 1199px){
   

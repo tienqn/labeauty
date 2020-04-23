@@ -153,6 +153,14 @@ return [
     'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
+	
+	'admin_phone' => '0778 362 690',
+
+	'admin_email' => 'kimvi1991@gmail.com',
+
+	'multiple_lang' => false,
+
+	'default_booking_time' => '08:00',
 
     /*
     |--------------------------------------------------------------------------
