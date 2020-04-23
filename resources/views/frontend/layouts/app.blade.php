@@ -21,7 +21,7 @@
         @stack('after-styles')
     </head>
     <body>
-		<main class="xs-main-content">
+		<main id="lb-main-content" class="xs-main-content">
 			@include('frontend.includes.nav')
 			@include('frontend.includes.mobile_nav')
 			

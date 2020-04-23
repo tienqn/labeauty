@@ -68,6 +68,12 @@
 }
 
 @media (max-width: 991px) {
+	/* === */
+	#lb-main-content {
+		margin-bottom: 100px;
+	}
+
+	/* ==== */
 	#lb-header {
 		display: none;
 	}
