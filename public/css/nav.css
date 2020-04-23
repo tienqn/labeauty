@@ -102,6 +102,10 @@
 		font-size: 18px;
 	}
 
+	#lb-nav-bottom .contact .contact-ico {
+		width: 40px;
+	}
+
 }
 
 @media (max-width: 480px) {
@@ -116,6 +120,10 @@
 
 	#lb-mobile-header .lb-slogan {
 		font-size: 16px;
+	}
+
+	#lb-nav-bottom .contact .contact-ico {
+		width: 30px;
 	}
 
 }
