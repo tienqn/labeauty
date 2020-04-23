@@ -2,6 +2,26 @@
 	display: none;
 }
 
+#lb-mobile-header nav{
+	padding: 0;
+}
+
+#lb-mobile-header .lb-logo img{
+	width: 110px;
+	padding: 10px;
+}
+
+#lb-mobile-header .lb-navbar-collapse{
+	background-color: var(--color-second);
+	padding: 10px;
+}
+
+#lb-mobile-header .lb-navbar-collapse li a{
+	color: var(--color-white);
+}
+
+/* ==== */
+
 #lb-header .lb-logo:before{
 	content: none;
 }
@@ -13,6 +33,8 @@
 #lb-header .lb-logo{
 	box-shadow: none;
 }
+
+/* ==== */
 
 .lb-icon {
 	width: 25px;
@@ -55,9 +77,25 @@
 
 @media (max-width: 767px) {
 
+	#lb-mobile-header .lb-slogan {
+		font-size: 18px;
+	}
+
 }
 
 @media (max-width: 480px) {
+
+	#lb-mobile-header .lb-slogan .lb-branch-name {
+		display: none;
+	}
+
+	#lb-mobile-header .lb-logo img{
+		width: 80px;
+	}
+
+	#lb-mobile-header .lb-slogan {
+		font-size: 16px;
+	}
 
 }
 
