@@ -1,1 +1,8 @@
-@import url('nav.css');
+
+@import url("nav.css");
+
+@font-face {
+	font-family: 'UVNHuongQue_N';
+	src: url('../theme/fonts/unicode.display.UVNHuongQue_N.TTF');
+}
+

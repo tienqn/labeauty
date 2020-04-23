@@ -154,7 +154,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
     /* box-shadow primary */
 	--primary-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
 	
-	--color-text-main: #790000;
+	--color-second: #790000;
 }
 
 body {
