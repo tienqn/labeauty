@@ -6,8 +6,4 @@
 		$('.navbar-collapse').slideToggle();
 	});
 
-	$("#booking_modal").modal({
-		fadeDuration: 100
-	});
-
 })(jQuery);
