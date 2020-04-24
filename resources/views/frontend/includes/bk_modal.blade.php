@@ -3,7 +3,7 @@
 	<form action="#" method="POST" id="beautypress-booking-form">
 		<div class="beautypress-booking-form-wraper">
 			<div class="beautypress-service-and-date">
-				<h2>Dịch vụ</h2>
+				<h2 class="bk-title">Dịch vụ</h2>
 				<div class="row">
 					<div class="col">
 						<div class="form-group">
@@ -24,23 +24,25 @@
 								type="date"
 								id="appointment-date" 
 								class="form-control lb-input"
-								name="appointment-date" />
+								name="appointment-date" 
+								value='{{ date("Y-m-d", strtotime("+1 day")) }}'/>
 						</div>
 					</div><!-- .beautypress-date-select END -->
 					<div class="col">
-						<div class="input-group">
+						<div class="input-group appointment-time">
 							<input 
 								type="time"
 								name="appointment-time" 
 								id="appointment-time"
-								class="form-control lb-input"/>
+								class="form-control lb-input"
+								value="08:00"/>
 							
 						</div>
 					</div><!-- .beautypress-select END -->
 				</div>
 			</div><!-- .beautypress-service-and-date END -->
 			<div class="beautypress-personal-information">
-				<h2>Thông tin cá nhân</h2>
+				<h2 class="bk-title">Thông tin cá nhân</h2>
 				<div class="form-group phone-group">
 					<input 
 						type="number" 
@@ -71,16 +73,16 @@
 				<div class="form-group massage-gropu">
 					<textarea 
 						class="form-control lb-textarea" 
-						rows="5" 
+						rows="3" 
 						id="appointment-comment"
 						placeholder="Yêu cầu"></textarea>
 				</div>
 				<div class="form-group button-group text-center">
-					<button type="submit" class="lb-submit">Gửi ngay</button>
+					<button type="submit" class="lb-submit"><img src="theme/img/icon/send.svg" class="lb-icon"/>Gửi ngay</button>
 				</div>
 			</div><!-- .beautypress-personal-information END -->
 		</div>
 	</form><!-- #beautypress-booking-form END -->
 </div>
 <!-- Link to open the modal -->
-<a href="#booking_modal" rel="modal:open" class="bk_modal lb-submit">Đặt lịch</a>
+<a href="#booking_modal" rel="modal:open" class="bk_modal lb-submit"><img src="theme/img/icon/calendar.svg" class="lb-icon"/> <span>Đặt lịch</span></a>

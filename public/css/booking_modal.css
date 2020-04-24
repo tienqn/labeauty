@@ -33,7 +33,8 @@
     color: var(--color-white);
     border: 0;
     border-radius: 25px;
-    padding: 15px 46px;
+	/* padding: 15px 46px; */
+	padding: 15px;
     cursor: pointer;
     transition: all .4s ease;
 }
@@ -51,15 +52,67 @@
 	z-index: 1;
 }
 
+.bk-title{
+	color: var(--color-second) !important;
+	text-transform: uppercase;
+}
+
+#booking_modal .input-group {
+	margin-bottom: 20px;
+}
+
 @media (min-width: 992px) and (max-width: 1199px){
   
 }
 
 @media (max-width: 991px) {
 
+	.bk_modal{
+		bottom: 160px;
+		right: 20px;
+	}
+
 }
 
 @media (max-width: 767px) {
+	#booking_modal .input-group {
+		margin-bottom: 10px;
+	}
+
+	#booking_modal .massage-gropu {
+		margin: 0 0 20px;
+	}
+
+	#booking_modal .form-group {
+		margin: 0 0 10px !important;
+	}
+
+	.bk_modal{
+		bottom: 130px;
+		font-size: 12px;
+		width: 50px;
+	}
+
+	.bk-title{
+		font-size: 1.3em !important;
+		margin: 0 0 10px !important;
+	}
+
+	#appointment-comment{
+		height: 100px;
+	}
+
+	.appointment-time {
+		margin-bottom: 0 !important;
+	}
+
+	.bk_modal span {
+		display: none;
+	}
+
+	.bk_modal img {
+		margin-right: 0;
+	}
 
 }
 
