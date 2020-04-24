@@ -29,8 +29,9 @@
 			
 			@include('frontend.includes.footer')
 		</main>
+		@include('frontend.includes.bk_modal')
 		@include('frontend.includes.mobile_nav_bottom')
-
+		
         <!-- Scripts -->
         @stack('before-scripts')
 		<script src="js/labeauty.js"></script>
