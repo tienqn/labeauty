@@ -30,6 +30,7 @@ class BookingRepository extends BaseRepository
      */
     public function create(array $data)
     {
+		dd($data);
         return DB::transaction(function () use ($data) {
             $service = $this->model::create([
                 'service_id' => $data['service_id'],

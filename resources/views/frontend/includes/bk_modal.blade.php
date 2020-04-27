@@ -131,11 +131,12 @@
 								request : data.get('request')
 							})
 							.then(function (response) {
-								setTimeout(function() { 
-									alert("@lang('header.booking_form.booking_ok')")
-									$('#modalBooking').modal('hide')
-									location.reload()
-								}, 3000)
+								console.log(response)
+								// setTimeout(function() { 
+								// 	alert("@lang('header.booking_form.booking_ok')")
+								// 	$('#modalBooking').modal('hide')
+								// 	location.reload()
+								// }, 3000)
 							})
 						}
 					</script>

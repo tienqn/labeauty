@@ -31,17 +31,16 @@ class BookingController extends Controller
 	 */
 	public function book(Request $request)
 	{
-		dd(1);
-        // $this->bookingRepository->create($request->only(
-        //     'service_id',
-        //     'booking_date',
-        //     'booking_time',
-        //     'name',
-        //     'email',
-        //     'phone_number',
-        //     'request'
-        // ));
+        $this->bookingRepository->create($request->only(
+            'service_id',
+            'booking_date',
+            'booking_time',
+            'name',
+            'email',
+            'phone_number',
+            'request'
+        ));
 
-		// return response()->json(true);
+		return response()->json(true);
 	}
 }
