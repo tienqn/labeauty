@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Http\Composers\Backend\SidebarComposer;
 use App\Http\Composers\GlobalComposer;
+use App\Http\Composers\Frontend\BookingModalComposer;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -24,7 +25,11 @@ class ComposerServiceProvider extends ServiceProvider
             GlobalComposer::class
         );
 
-        // Frontend
+		// Frontend
+		View::composer(
+            'frontend.includes.booking_modal',
+            BookingModalComposer::class
+        );
 
         // Backend
         View::composer(

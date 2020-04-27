@@ -4,6 +4,7 @@ namespace App\Http\Composers\Backend;
 
 use App\Repositories\Backend\Auth\UserRepository;
 use Illuminate\View\View;
+use App\Models\Booking\LbBooking;
 
 /**
  * Class SidebarComposer.
@@ -37,5 +38,7 @@ class SidebarComposer
         } else {
             $view->with('pending_approval', 0);
         }
+		
+		$view->with('new_booking', LbBooking::whereIsRead(false)->count());
     }
 }
