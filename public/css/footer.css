@@ -1,0 +1,47 @@
+
+#lb-footer {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 829.4" preserveAspectRatio="none"><path fill= "rgba(121, 0, 0, 1)" fill-opacity= "0.7" fill-rule= "evenodd" d="M0,10266s198.4,114,387,5,497.966-214.4,774-170,689.47,140,759,169v650H0v-654Z" transform="translate(0 -10090.6)"/></svg>');
+}
+
+#lb-footer:after {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 829.4" preserveAspectRatio="none"><path fill= "rgba(121, 0, 0, 1)" fill-opacity= "0.7" fill-rule= "evenodd" d="M0,10095s570.853,396,1495,58c0,0,271.65-105.1,425-92v863H0v-829Z" transform="translate(0 -10059.8)"/></svg>');
+}
+
+#lb-footer .beautypress-single-footer p{
+	color: var(--color-white);
+	text-align: left;
+}
+
+#lb-footer .beautypress-footer-content {
+	padding: 0 0 20px;
+	margin: 0 0 20px;
+}
+
+#lb-footer .beautypress-copyright-text {
+	padding: 0 0 20px;
+}
+
+#lb-footer .beautypress-subscribe-wraper {
+	width: 40%;
+    margin: 0 auto 50px auto;
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+  
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 320px) {
+	
+}
