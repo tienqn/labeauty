@@ -12,8 +12,7 @@
 				<form action="#" method="POST" class="mc-form">
 					<div class="beautypress-subscribe">
 						<input type="email" placeholder="Vui lòng nhập email" id="mc-email">
-						<input type="submit" value="Đăng kí" class="beautypress-sub">
-						<label for="mc-email"></label>
+						<button type="submit" class="subcribe">Đăng kí</button>
 					</div><!-- .beautypress-subscribe END -->
 				</form>
 			</div><!-- .beautypress-subscribe-wraper END -->
@@ -29,15 +28,15 @@
 				<div class="col-md-12 col-sm-12 col-lg-4 col-xl-4">
 					<div class="beautypress-single-footer beautypress-single-footer-group">
 						<p class="work_time">LIÊN HỆ</p>
-						<p>La beauty - 08 Nguyễn Trường Tộ - Đà Nẵng</p>
+						<p>08 Nguyễn Trường Tộ - Đà Nẵng</p>
 						<p>Email: {{ config('app.admin_email') }}</p>
 						<p>Điện thoại: {{ config('app.admin_phone') }}</p>
 					</div><!-- .beautypress-single-footer END -->
 				</div>
 				<div class="col-md-12 col-sm-12 col-lg-4 col-xl-4">
-					<div class="beautypress-single-footer">
-						<p>Then an unknown printer took a galley of type and scrambled it to make a type
-							specimen book. It has survived not only five.</p>
+					<div class="beautypress-single-footer beautypress-single-footer-group">
+						<p class="work_time">FACEBOOK</p>
+						<div class="fb-page" data-href="https://www.facebook.com/lego304/" data-tabs="timeline" data-width="" data-height="200" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/lego304/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/lego304/">Game Lego - 304/1 Điện Biên Phủ, Đà Nẵng</a></blockquote></div>
 					</div><!-- .beautypress-single-footer END -->
 				</div>
 			</div>

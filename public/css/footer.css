@@ -38,6 +38,33 @@
 	font-weight: bold;
 }
 
+#lb-footer .subcribe {
+	position: absolute;
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 50px;
+    border: 0;
+    border-radius: 80px;
+    background-color: var(--color-purple);
+    padding: 0 30px;
+    color: var(--color-second);
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+#lb-footer .subcribe:hover {
+	background-color: var(--color-second);
+	color: var(--color-white);
+}
+
+#lb-footer .beautypress-single-footer-group p {
+    line-height: 1.5;
+}
+
 @media (min-width: 992px) and (max-width: 1199px){
   
 }

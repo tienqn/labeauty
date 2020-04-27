@@ -21,6 +21,7 @@
         @stack('after-styles')
     </head>
     <body>
+		<div id="fb-root"></div>
 		<main id="lb-main-content" class="xs-main-content">
 			@include('frontend.includes.nav')
 			@include('frontend.includes.mobile_nav')
