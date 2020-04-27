@@ -27,7 +27,7 @@ class ComposerServiceProvider extends ServiceProvider
 
 		// Frontend
 		View::composer(
-            'frontend.includes.booking_modal',
+            'frontend.includes.bk_modal',
             BookingModalComposer::class
         );
 
