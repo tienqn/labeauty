@@ -42,7 +42,7 @@
 							$stt = $bookings->total();
 						@endphp
                         @foreach($bookings as $booking)
-                            <tr class="@if(!$booking->is_read) lb-not-seem @endif" data-href="{{ route('admin.booking.show', $booking) }}">
+                            <tr class="@if(!$booking->is_read) lb-not-seen @endif" data-href="{{ route('admin.booking.show', $booking) }}">
                                 <td>{{ $stt }}</td>
                                 <td>{{ $booking->name }}</td>
                                 <td>{{ $booking->phone_number }}</td>
