@@ -4,6 +4,12 @@
 	text-transform: uppercase;
 	margin-bottom: 20px;
 }
+
+#lb-slider .beautypress-welcome-container h3 {
+	font-family: 'UVNHuongQue_N';
+	font-weight: 500;
+}
+
 #lb-slider .beautypress-welcome-container h3 {
 	line-height: 1.2;
 }
@@ -35,6 +41,7 @@
 	}
 	#lb-slider .beautypress-welcome-container h2 {
 		font-size: 1.5em;
+		margin-bottom: 5px;
 	}
 	#lb-slider .beautypress-welcome-container h3 {
 		font-size: 1.5em;
