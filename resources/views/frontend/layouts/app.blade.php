@@ -16,7 +16,7 @@
 
         @stack('before-styles')
 
-		<link rel="stylesheet" href="css/labeauty.css" />
+		<link rel="stylesheet" href="css/frontend/app.css" />
 
         @stack('after-styles')
     </head>
@@ -35,7 +35,7 @@
 		
         <!-- Scripts -->
         @stack('before-scripts')
-		<script src="js/labeauty.js"></script>
+		<script src="js/frontend/app.js"></script>
         @stack('after-scripts')
 
     </body>

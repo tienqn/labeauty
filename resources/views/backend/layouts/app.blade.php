@@ -19,7 +19,7 @@
     <!-- Check if the language is set to RTL, so apply the RTL layouts -->
     <!-- Otherwise apply the normal LTR layouts -->
     {{ style(mix('css/backend.css')) }}
-	<link rel="stylesheet" href="{{ asset('backend/css/labeauty.css') }}" />
+	<link rel="stylesheet" href="{{ asset('css/backend/app.css') }}" />
 
     @stack('after-styles')
 </head>
@@ -80,7 +80,7 @@
     {!! script(mix('js/manifest.js')) !!}
     {!! script(mix('js/vendor.js')) !!}
     {!! script(mix('js/backend.js')) !!}
-	<script src="{{ asset('backend/js/labeauty.js') }}"></script>
+	<script src="{{ asset('js/backend/app.js') }}"></script>
     @stack('after-scripts')
 </body>
 </html>
