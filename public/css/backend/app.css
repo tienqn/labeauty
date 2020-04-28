@@ -1,2 +1,3 @@
-@import url("../backend/common.css");
+@import url("../backend/common/common.css");
+@import url("../backend/pages/dashboard.css");
 @import url("../backend/pages/booking.css");
