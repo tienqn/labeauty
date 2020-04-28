@@ -12,7 +12,7 @@
 @import url("../../theme/css/style.css");
 @import url("../../theme/css/responsive.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css");
-@import url("../frontend/common.css");
+@import url("../frontend/common/common.css");
 @import url("../frontend/pages/home.css");
 
 @font-face {
