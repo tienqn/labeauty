@@ -4,18 +4,18 @@
 
 @section('content')
 <!-- welcome section -->
-<section class="beautypress-welcome-section beautypress-welcome-section-v1 welcome-height-calc-minus">
+<section id="lb-slider" class="beautypress-welcome-section beautypress-welcome-section-v1 welcome-height-calc-minus">
 	<div class="beautypress-welcome-slider-wraper">
 		<div class="beautypress-welcome-slider owl-carousel">
-			<div class="beautypress-welcome-slider-item content-left beautypress-bg"
-				style="background-image: url(theme/img/slider-bg-1.png);">
+			<div class="beautypress-welcome-slider-item content-right beautypress-bg"
+				style="background-image: url(theme/img/slider-bg-3.png);">
 				<div class="container">
 					<div class="beautypress-welcome-content-group">
 						<div class="beautypress-welcome-container">
 							<div class="beautypress-welcome-wraper">
-								<h2 class="color-pink">37th Years Of </h2>
-								<h3 class="color-purple">BeautyPress</h3>
-								<p class="color-black">Allow our team of beauty specialists to help you prepare
+								<h2 class="color-pink">Mừng đại lễ 30/4</h2>
+								<h3 class="color-purple"><i>Trao gửi yêu thương. Ưu đãi lên đến 50%</i></h3>
+								<!-- <p class="color-black">Allow our team of beauty specialists to help you prepare
 									for your wedding and enhance your special.</p>
 								<div class="beautypress-btn-wraper">
 									<a href="#" class="xs-btn bg-color-pink round-btn box-shadow-btn">learn more
@@ -23,7 +23,29 @@
 									<a href="#"
 										class="xs-btn bg-color-purple round-btn box-shadow-btn">phurchase
 										<span></span></a>
-								</div>
+								</div> -->
+							</div>
+						</div><!-- .beautypress-welcome-container END -->
+					</div><!-- .beautypress-welcome-content-group END -->
+				</div>
+			</div><!-- .beautypress-welcome-slider-item END -->
+			<div class="beautypress-welcome-slider-item content-left beautypress-bg"
+				style="background-image: url(theme/img/slider-bg-1.png);">
+				<div class="container">
+					<div class="beautypress-welcome-content-group">
+						<div class="beautypress-welcome-container">
+							<div class="beautypress-welcome-wraper">
+								<h2 class="color-pink">MÓN QUÀ SẮC ĐẸP </h2>
+								<h3 class="color-purple"><i>Làm đẹp thả ga không lo về giá</i></h3>
+								<!-- <p class="color-black">Allow our team of beauty specialists to help you prepare
+									for your wedding and enhance your special.</p>
+								<div class="beautypress-btn-wraper">
+									<a href="#" class="xs-btn bg-color-pink round-btn box-shadow-btn">learn more
+										<span></span></a>
+									<a href="#"
+										class="xs-btn bg-color-purple round-btn box-shadow-btn">phurchase
+										<span></span></a>
+								</div> -->
 							</div>
 						</div><!-- .beautypress-welcome-container END -->
 					</div><!-- .beautypress-welcome-content-group END -->
@@ -35,9 +57,9 @@
 					<div class="beautypress-welcome-content-group">
 						<div class="beautypress-welcome-container">
 							<div class="beautypress-welcome-wraper">
-								<h2 class="color-pink">Beautiful Face</h2>
-								<h3 class="color-purple">Healthy You</h3>
-								<p class="color-black">Allow our team of beauty specialists to help you prepare
+								<h2 class="color-pink">ƯU ĐÃI TRẢ GÓP 0%</h2>
+								<h3 class="color-purple"><i>Không cần chứng minh thu nhập</i></h3>
+								<!-- <p class="color-black">Allow our team of beauty specialists to help you prepare
 									for your wedding and enhance your special.</p>
 								<div class="beautypress-btn-wraper">
 									<a href="#" class="xs-btn bg-color-pink round-btn box-shadow-btn">learn more
@@ -45,29 +67,7 @@
 									<a href="#"
 										class="xs-btn bg-color-purple round-btn box-shadow-btn">phurchase
 										<span></span></a>
-								</div>
-							</div>
-						</div><!-- .beautypress-welcome-container END -->
-					</div><!-- .beautypress-welcome-content-group END -->
-				</div>
-			</div><!-- .beautypress-welcome-slider-item END -->
-			<div class="beautypress-welcome-slider-item content-right beautypress-bg"
-				style="background-image: url(theme/img/slider-bg-3.png);">
-				<div class="container">
-					<div class="beautypress-welcome-content-group">
-						<div class="beautypress-welcome-container">
-							<div class="beautypress-welcome-wraper">
-								<h2 class="color-pink">Beauty means</h2>
-								<h3 class="color-purple">Happiness</h3>
-								<p class="color-black">Allow our team of beauty specialists to help you prepare
-									for your wedding and enhance your special.</p>
-								<div class="beautypress-btn-wraper">
-									<a href="#" class="xs-btn bg-color-pink round-btn box-shadow-btn">learn more
-										<span></span></a>
-									<a href="#"
-										class="xs-btn bg-color-purple round-btn box-shadow-btn">phurchase
-										<span></span></a>
-								</div>
+								</div> -->
 							</div>
 						</div><!-- .beautypress-welcome-container END -->
 					</div><!-- .beautypress-welcome-content-group END -->
@@ -346,7 +346,7 @@
 										placeholder="First Name....">
 								</div>
 								<div class="form-group email-group">
-									<input type="email" name="email" class="form-control" id="email"
+									<input type="email" name="email" class="form-control" id="emaill"
 										placeholder="Email Address....">
 								</div>
 							</div>
