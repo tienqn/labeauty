@@ -32,7 +32,8 @@ class BookingStatusController extends Controller
     public function getWaiting(ManageBookingRequest $request)
     {
         return view('backend.booking.waiting')
-            ->withBookings($this->bookingRepository->getWaitingPaginated(10, 'id', 'asc'));
+			->withBookings($this->bookingRepository->getWaitingPaginated(10, 'id', 'asc'))
+			->withIsActive(true);
     }
 
     /**
@@ -43,7 +44,8 @@ class BookingStatusController extends Controller
     public function getCalled(ManageBookingRequest $request)
     {
         return view('backend.booking.called')
-            ->withBookings($this->bookingRepository->getCalledPaginated(10, 'id', 'asc'));
+            ->withBookings($this->bookingRepository->getCalledPaginated(10, 'id', 'asc'))
+			->withIsActive(true);
     }
 
     /**
@@ -54,7 +56,8 @@ class BookingStatusController extends Controller
     public function getProcessing(ManageBookingRequest $request)
     {
         return view('backend.booking.processing')
-            ->withBookings($this->bookingRepository->getProcessingPaginated(10, 'id', 'asc'));
+            ->withBookings($this->bookingRepository->getProcessingPaginated(10, 'id', 'asc'))
+			->withIsActive(true);
     }
 
     /**
@@ -65,7 +68,8 @@ class BookingStatusController extends Controller
     public function getCompleted(ManageBookingRequest $request)
     {
         return view('backend.booking.completed')
-            ->withBookings($this->bookingRepository->getCompletedPaginated(10, 'id', 'asc'));
+            ->withBookings($this->bookingRepository->getCompletedPaginated(10, 'id', 'asc'))
+			->withIsActive(true);
     }
 
     /**
@@ -76,6 +80,7 @@ class BookingStatusController extends Controller
     public function getReject(ManageBookingRequest $request)
     {
         return view('backend.booking.reject')
-            ->withBookings($this->bookingRepository->getRejectPaginated(10, 'id', 'asc'));
+            ->withBookings($this->bookingRepository->getRejectPaginated(10, 'id', 'asc'))
+			->withIsActive(true);
     }
 }

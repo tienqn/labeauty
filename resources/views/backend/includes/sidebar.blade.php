@@ -16,8 +16,8 @@
 			
             <li class="nav-item">
                 <a class="nav-link {{
-                    active_class(Route::is('admin/booking'))
-                }}" href="{{ route('admin.booking.index') }}">
+                    active_class(Route::is('admin/booking*'))
+                }} @if(isset($isActive)) {{ 'active' }} @endif" href="{{ route('admin.booking.index') }}">
 					<i class="nav-icon fa fa-calendar" aria-hidden="true"></i>
                     @lang('menus.backend.sidebar.booking')
 					@if($new_booking > 0) 

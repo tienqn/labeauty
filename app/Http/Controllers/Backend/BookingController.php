@@ -53,7 +53,8 @@ class BookingController extends Controller
 		}
 
         return view('backend.booking.show')
-            ->withBooking($booking->load('service'));
+            ->withBooking($booking->load('service'))
+			->withIsActive(true);
     }
 
     /**

@@ -87,60 +87,6 @@
 				</div>
 				<div class="form-group button-group text-center">
 					<button type="submit" class="lb-submit" id="booking_button"><img src="theme/img/icon/send.svg" class="lb-icon"/><span id="submit_text">Gửi ngay</span></button>
-					<script>
-						/* code from qodo.co.uk */ 
-						function toggleFormElements(bDisabled) { 
-							var inputs = document.getElementsByTagName("input")
-							for (var i = 0; i < inputs.length; i++) { 
-								inputs[i].disabled = bDisabled
-							} 
-							var selects = document.getElementsByTagName("select")
-							for (var i = 0; i < selects.length; i++) {
-								selects[i].disabled = bDisabled;
-							}
-							var textareas = document.getElementsByTagName("textarea")
-							for (var i = 0; i < textareas.length; i++) { 
-								textareas[i].disabled = bDisabled
-							}
-							// var buttons = document.getElementsByTagName("button")
-							// for (var i = 0; i < buttons.length; i++) {
-							// 	buttons[i].disabled = bDisabled
-							// }
-						}
-
-						var form = document.getElementById("booking_form")
-						var button = document.getElementById("booking_button")
-						var submit_text = document.getElementById("submit_text")
-						form.onsubmit = function(e) {
-							e.preventDefault()
-							
-							var url = form.getAttribute("action")
-							var data = new FormData(this)
-
-							toggleFormElements(true)
-							button.removeChild(submit_text)
-							button.appendChild(document.createTextNode("@lang('header.booking_form.submiting')"))
-							
-							axios.post(url, {
-								service_id : data.get('service'),
-								booking_date : data.get('booking_date'),
-								booking_time : data.get('booking_time'),
-								name : data.get('name'),
-								email : data.get('email'),
-								phone_number : data.get('phone_number'),
-								request : data.get('request')
-							})
-							.then(function (response) {
-								setTimeout(function() { 
-									alert("@lang('header.booking_form.booking_ok')")
-									location.reload()
-								}, 3000)
-							})
-							.catch(error => {
-								console.log('error.response ' + error.response)
-							});
-						}
-					</script>
 				</div>
 			</div><!-- .beautypress-personal-information END -->
 		</div>
