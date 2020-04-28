@@ -21,7 +21,7 @@
 					<i class="nav-icon fa fa-calendar" aria-hidden="true"></i>
                     @lang('menus.backend.sidebar.booking')
 					@if($new_booking > 0) 
-						<span class="count-item badge badge-pill badge-danger">{{ $new_booking }} </span>
+						<span class="lb-badge count-item badge badge-pill badge-danger">{{ $new_booking }} </span>
 					@endif
 				</a>
             </li>

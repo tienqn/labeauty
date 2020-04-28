@@ -1,10 +1,10 @@
-<header class="app-header navbar">
+<header class="app-header navbar" id="lb-app-header">
     <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
         <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="#">
 		<!-- <img class="navbar-brand-full" src="{{ asset('img/backend/brand/logo.svg') }}" width="89" height="25" alt="CoreUI Logo"> -->
-		<img src="{{ asset('img/logo1.png') }}" alt=""  width="89">
+		<img src="{{ asset('logo2.png') }}" alt=""  width="60">
     </a>
     <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
         <span class="navbar-toggler-icon"></span>

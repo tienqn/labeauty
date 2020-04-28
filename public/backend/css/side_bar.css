@@ -1,0 +1,38 @@
+
+.sidebar {
+	background-color: var(--color-second);
+}
+
+.sidebar .nav-link:hover {
+    color: inherit;
+    background: inherit;
+}
+
+.sidebar .nav-link.active {
+	background: var(--color-purple);
+	color: var(--color-second);
+}
+
+.sidebar .nav-link.active .nav-icon, .sidebar .nav-link .nav-icon{
+	color: var(--color-white);
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+  
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 320px) {
+	
+}

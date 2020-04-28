@@ -1,0 +1,41 @@
+:root {
+    /*color purple*/
+    --color-purple: rgba(218,184,20,1);
+    /* --color-purple: #6A1B9A; */
+    /* color navy blue */
+    --color-navy-blue: rgb(218, 183, 8);
+    /* --color-navy-blue: #590D88; */
+    /* color pink */
+    --color-pink: #EC5598;
+    /* color pink 2 */
+    --color-pink-2: #E6377A;
+    /* color white */
+    --color-white: #FFFFFF;
+    /* color semi black */
+    --color-semi-black: #222222;
+    /* color light blck */
+    --color-semi-ash: #777777;
+    /* color sky blue */
+    --color-sky-blue: #00BCD4;
+    /* color light red */
+    --light-red: #FF4641;
+    /* color orange */
+    --color-orange: #F79700;
+    /* cyan color */
+    --color-cyan: #4DB6AC;
+    /* color light chocolate */
+    --color-chocolate: #E3BDA8;
+    /* font family cursive */
+    --font-cursive: 'Niconne', cursive;
+    /* icons font 1 */
+    --font-icons-1: 'FontAwesome';
+    /* icons font 2 */
+    --font-icons-2: 'iconfont';
+    /* box-shadow hover */
+    --hover-shadow: 0px 8px 21px 0px rgba(0, 0, 0, 0.1);
+    /* box-shadow primary */
+	--primary-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+	
+	--color-second: #790000;
+	--color-second-active: #460202;
+}

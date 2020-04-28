@@ -14,11 +14,12 @@
     @yield('meta')
 
     {{-- See https://laravel.com/docs/5.5/blade#stacks for usage --}}
-    @stack('before-styles')
+	@stack('before-styles')
 
     <!-- Check if the language is set to RTL, so apply the RTL layouts -->
     <!-- Otherwise apply the normal LTR layouts -->
     {{ style(mix('css/backend.css')) }}
+	<link rel="stylesheet" href="{{ asset('backend/css/labeauty.css') }}" />
 
     @stack('after-styles')
 </head>
@@ -79,6 +80,7 @@
     {!! script(mix('js/manifest.js')) !!}
     {!! script(mix('js/vendor.js')) !!}
     {!! script(mix('js/backend.js')) !!}
+	<script src="{{ asset('backend/js/labeauty.js') }}"></script>
     @stack('after-scripts')
 </body>
 </html>

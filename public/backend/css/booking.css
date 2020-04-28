@@ -1,0 +1,25 @@
+
+.lb-not-seen {
+	font-style: italic;
+	font-weight: bold;
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+  
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 320px) {
+	
+}
