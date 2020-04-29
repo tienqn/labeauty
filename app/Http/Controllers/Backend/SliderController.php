@@ -7,6 +7,7 @@ use App\Http\Requests\Backend\Slider\ManageSliderRequest;
 use App\Http\Requests\Backend\Slider\UpdateSliderRequest;
 use App\Repositories\Backend\SliderRepository;
 use App\Models\Slider\LbSlider;
+use Illuminate\Http\Request;
 
 /**
  * Class SliderController.
@@ -76,5 +77,31 @@ class SliderController extends Controller
 		}
 
         return redirect()->route('admin.slider.index')->withFlashSuccess(__('alerts.backend.slider.updated'));
+    }
+
+    /**
+     * @param ManageSliderRequest $request
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function showHome(ManageSliderRequest $request)
+    {
+        return view('backend.slider.show_home')
+            ->withSliders($this->sliderRepository->getPaginatedShowHome(10, 'id', 'asc'))
+			->withIsSliderActive(true);
+    }
+
+    /**
+     * @param Request $request
+     *
+     * @throws \App\Exceptions\GeneralException
+     * @throws \Throwable
+     * @return mixed
+     */
+    public function updateOrder(Request $request)
+    {
+        $this->sliderRepository->updateOrder($request->except(['_token']));
+
+        return redirect()->route('admin.slider.show_home')->withFlashSuccess(__('Sắp xếp banner thành công.'));
     }
 }

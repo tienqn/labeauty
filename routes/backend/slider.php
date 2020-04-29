@@ -10,6 +10,8 @@ Route::group([
 ], function () {
 	// Slider CRUD
 	Route::get('/', [SliderController::class, 'index'])->name('index');
+	Route::get('/show_home', [SliderController::class, 'showHome'])->name('show_home');
+	Route::post('/update_order', [SliderController::class, 'updateOrder'])->name('update_order');
 
 	Route::group(['prefix' => '{slider}'], function () {
 		Route::get('/', [SliderController::class, 'show'])->name('show');

@@ -9,39 +9,19 @@
 				data-toggle="dropdown" 
 				aria-haspopup="true" 
 				aria-expanded="false">
-				@lang('menus.backend.access.booking.main')
+				@lang('Banner')
 			</a>
 
             <div class="dropdown-menu" aria-labelledby="breadcrumb-dropdown-1">
 				<a 
 					class="dropdown-item" 
-					href="{{ route('admin.booking.index') }}">
-					@lang('strings.backend.access.booking.status.all')
+					href="{{ route('admin.slider.index') }}">
+					@lang('Tất cả')
 				</a>
 				<a 
 					class="dropdown-item" 
-					href="{{ route('admin.booking.waiting') }}">
-					@lang('strings.backend.access.booking.status.waiting')
-				</a>
-				<a 
-					class="dropdown-item" 
-					href="{{ route('admin.booking.called') }}">
-					@lang('strings.backend.access.booking.status.called')
-				</a>
-				<a 
-					class="dropdown-item" 
-					href="{{ route('admin.booking.processing') }}">
-					@lang('strings.backend.access.booking.status.processing')
-				</a>
-				<a 
-					class="dropdown-item" 
-					href="{{ route('admin.booking.completed') }}">
-					@lang('strings.backend.access.booking.status.completed')
-				</a>
-				<a 
-					class="dropdown-item" 
-					href="{{ route('admin.booking.reject') }}">
-					@lang('strings.backend.access.booking.status.reject')
+					href="{{ route('admin.slider.show_home') }}">
+					@lang('Hiển thị trang chủ')
 				</a>
             </div>
         </div><!--dropdown-->

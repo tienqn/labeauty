@@ -7,4 +7,13 @@ namespace App\Models\Slider\Traits\Scope;
  */
 trait SliderScope
 {
+    /**
+     * @param $query
+     *
+     * @return mixed
+     */
+    public function scopeShowHome($query)
+    {
+        return $query->where('show', 'true');
+	}
 }

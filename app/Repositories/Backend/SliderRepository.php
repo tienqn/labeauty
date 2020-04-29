@@ -32,7 +32,6 @@ class SliderRepository extends BaseRepository
     public function getPaginated($paged = 25, $orderBy = 'created_at', $sort = 'desc'): LengthAwarePaginator
     {
         return $this->model
-            // ->with('service')
             // ->orderBy('is_read', $sort)
             // ->orderBy('booking_date', $sort)
             // ->orderBy('booking_time', $sort)
@@ -59,6 +58,47 @@ class SliderRepository extends BaseRepository
             }
 
             throw new GeneralException(__('exceptions.backend.access.slider.update_error'));
+        });
+    }
+
+    /**
+     * @param int    $paged
+     * @param string $orderBy
+     * @param string $sort
+     *
+     * @return mixed
+     */
+    public function getPaginatedShowHome($paged = 25, $orderBy = 'created_at', $sort = 'desc'): LengthAwarePaginator
+    {
+        return $this->model
+			->showHome()
+			->orderBy('order', 'desc')
+            // ->orderBy('is_read', $sort)
+            // ->orderBy('booking_date', $sort)
+            // ->orderBy('booking_time', $sort)
+            ->paginate($paged);
+    }
+
+    /**
+     * @param LbSlider  $slider
+     * @param array $data
+     *
+     * @throws GeneralException
+     * @throws \Exception
+     * @throws \Throwable
+     * @return LbSlider
+     */
+    public function updateOrder(array $data)
+    {
+		return DB::transaction(function () use ($data) {
+
+			foreach ($data as $key => $value) {
+				$id = explode("_", $key)[1];
+
+				$slider = $this->getById($id);
+				$slider->order = $value;
+				$slider->save();
+			}
         });
     }
 }

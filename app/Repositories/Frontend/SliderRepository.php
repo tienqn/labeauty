@@ -25,7 +25,7 @@ class SliderRepository extends BaseRepository
     {
 		return $this->model
 			->where('show', 'true', '=')
-			->orderBy('order')
+			->orderBy('order', 'desc')
 			->get();
     }
 }

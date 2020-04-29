@@ -31,40 +31,43 @@
 								<th>@lang('Mô tả')</th>
 								<th>@lang('Hình ảnh')</th>
 								<th>@lang('Vị trí chữ')</th>
-								<th>@lang('Hiển thị')</th>
+								<th>@lang('Sắp xếp')</th>
 							</tr>
                         </thead>
                         <tbody>
 						@php 
 							$stt = $sliders->total();
 						@endphp
-                        @foreach($sliders as $slider)
-                            <tr>
-                                <td>{{ $stt }}</td>
-                                <td><a href="{{ route('admin.booking.show', $slider) }}">{{ $slider->title }}</a></td>
-                                <td>{{ $slider->description }}</td>
-                                <td class="position">
-									{!! $slider->background_image !!}
-									<span class="position-{{ $slider->text_position }}">
-									</span>
-								</td>
-                                <td>{!! $slider->text_position_label !!}</td>
-                                <td>
-									<input 
-										class="show"
-										type="checkbox" 
-										name="show" 
-										value="{{ $slider->show }}"
-										data-show="{{ $slider->show }}"
-										data-url="{{ route('admin.slider.update', $slider) }}"
-										@if($slider->show == 'true') {{ 'checked' }} @endif
-									>
-								</td>
-                            </tr>
-							@php 
-								$stt--;
-							@endphp
-                        @endforeach
+						<form method="post" action="{{ route('admin.slider.update_order') }}">
+							@csrf
+							@foreach($sliders as $slider)
+								<tr>
+									<td>{{ $stt }}</td>
+									<td><a href="{{ route('admin.slider.show', $slider) }}">{{ $slider->title }}</a></td>
+									<td>{{ $slider->description }}</td>
+									<td class="position">
+										{!! $slider->background_image !!}
+										<span class="position-{{ $slider->text_position }}">
+										</span>
+									</td>
+									<td>{!! $slider->text_position_label !!}</td>
+									<td>
+										<input type="number" value="{{ $slider->order }}" name="slider_{{ $slider->id }}"/>
+									</td>
+								</tr>
+								@php 
+									$stt--;
+								@endphp
+							@endforeach
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><button type="submit">Sắp xếp</button></td>
+							</tr>
+						</form>
                         </tbody>
                     </table>
                 </div>

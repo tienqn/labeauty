@@ -29,7 +29,7 @@
             <li class="nav-item">
                 <a class="nav-link {{
                     active_class(Route::is('admin/slider*'))
-                }} " href="{{ route('admin.slider.index') }}">
+                }} @if(isset($isSliderActive)) {{ 'active' }} @endif" href="{{ route('admin.slider.index') }}">
 					<i class="nav-icon fa fa-calendar" aria-hidden="true"></i>
                     @lang('Banner')
 				</a>
