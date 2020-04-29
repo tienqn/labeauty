@@ -20,4 +20,18 @@ class LbSlider extends Model
      * @var string
      */
     protected $table = 'lb_sliders';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'title',
+        'description',
+        'background',
+        'text_position',
+        'show',
+        'order'
+    ];
 }

@@ -58,19 +58,23 @@ class SliderController extends Controller
     }
 
     /**
-     * @param UpdateBookingRequest $request
-     * @param LbBooking              $user
+     * @param UpdateSliderRequest $request
+     * @param LbSlider              $slider
      *
      * @throws \App\Exceptions\GeneralException
      * @throws \Throwable
      * @return mixed
      */
-    public function update(UpdateBookingRequest $request, LbBooking $booking)
+    public function update(UpdateSliderRequest $request, LbSlider $slider)
     {
-        $this->bookingRepository->update($booking, $request->only(
-            'status'
-        ));
+        $this->sliderRepository->update($slider, $request->only(
+            'is_show'
+		));
+	
+		if ($request->ajax()) {
+			return response()->json(true);
+		}
 
-        return redirect()->route('admin.booking.index')->withFlashSuccess(__('alerts.backend.booking.updated'));
+        return redirect()->route('admin.slider.index')->withFlashSuccess(__('alerts.backend.slider.updated'));
     }
 }

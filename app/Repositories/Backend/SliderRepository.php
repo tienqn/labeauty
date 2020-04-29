@@ -40,115 +40,25 @@ class SliderRepository extends BaseRepository
     }
 
     /**
-     * @param int    $paged
-     * @param string $orderBy
-     * @param string $sort
-     *
-     * @return mixed
-     */
-    public function getWaitingPaginated($paged = 25, $orderBy = 'created_at', $sort = 'desc'): LengthAwarePaginator
-    {
-        return $this->model
-            ->with('service')
-            ->waiting()
-            ->orderBy('is_read', $sort)
-            ->orderBy('booking_date', $sort)
-            ->orderBy('booking_time', $sort)
-            ->paginate($paged);
-    }
-
-    /**
-     * @param int    $paged
-     * @param string $orderBy
-     * @param string $sort
-     *
-     * @return mixed
-     */
-    public function getCalledPaginated($paged = 25, $orderBy = 'created_at', $sort = 'desc'): LengthAwarePaginator
-    {
-        return $this->model
-            ->with('service')
-            ->called()
-            ->orderBy('is_read', $sort)
-            ->orderBy('booking_date', $sort)
-            ->orderBy('booking_time', $sort)
-            ->paginate($paged);
-    }
-
-    /**
-     * @param int    $paged
-     * @param string $orderBy
-     * @param string $sort
-     *
-     * @return mixed
-     */
-    public function getProcessingPaginated($paged = 25, $orderBy = 'created_at', $sort = 'desc'): LengthAwarePaginator
-    {
-        return $this->model
-            ->with('service')
-            ->processing()
-            ->orderBy('is_read', $sort)
-            ->orderBy('booking_date', $sort)
-            ->orderBy('booking_time', $sort)
-            ->paginate($paged);
-    }
-
-    /**
-     * @param int    $paged
-     * @param string $orderBy
-     * @param string $sort
-     *
-     * @return mixed
-     */
-    public function getCompletedPaginated($paged = 25, $orderBy = 'created_at', $sort = 'desc'): LengthAwarePaginator
-    {
-        return $this->model
-            ->with('service')
-            ->completed()
-            ->orderBy('is_read', $sort)
-            ->orderBy('booking_date', $sort)
-            ->orderBy('booking_time', $sort)
-            ->paginate($paged);
-    }
-
-    /**
-     * @param int    $paged
-     * @param string $orderBy
-     * @param string $sort
-     *
-     * @return mixed
-     */
-    public function getRejectPaginated($paged = 25, $orderBy = 'created_at', $sort = 'desc'): LengthAwarePaginator
-    {
-        return $this->model
-            ->with('service')
-            ->reject()
-            ->orderBy('is_read', $sort)
-            ->orderBy('booking_date', $sort)
-            ->orderBy('booking_time', $sort)
-            ->paginate($paged);
-    }
-
-    /**
-     * @param LbBooking  $booking
+     * @param LbSlider  $slider
      * @param array $data
      *
      * @throws GeneralException
      * @throws \Exception
      * @throws \Throwable
-     * @return LbBooking
+     * @return LbSlider
      */
-    public function update(LbBooking $booking, array $data): LbBooking
+    public function update(LbSlider $slider, array $data): LbSlider
     {
-		return DB::transaction(function () use ($booking, $data) {
-            if ($booking->update([
-                'status' => $data['status']
+		return DB::transaction(function () use ($slider, $data) {
+            if ($slider->update([
+                'show' => $data['is_show'] ? 'false' : 'true'
             ])) {
 
-                return $booking;
+                return $slider;
             }
 
-            throw new GeneralException(__('exceptions.backend.access.booking.update_error'));
+            throw new GeneralException(__('exceptions.backend.access.slider.update_error'));
         });
     }
 }

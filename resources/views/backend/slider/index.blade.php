@@ -40,13 +40,27 @@
 							$stt = $sliders->total();
 						@endphp
                         @foreach($sliders as $slider)
-                            <tr data-href="{{ route('admin.booking.show', $slider) }}">
+                            <tr>
                                 <td>{{ $stt }}</td>
-                                <td>{{ $slider->title }}</td>
+                                <td><a href="{{ route('admin.booking.show', $slider) }}">{{ $slider->title }}</a></td>
                                 <td>{{ $slider->description }}</td>
-                                <td>{{ $slider->background }}</td>
-                                <td>{{ $slider->text_position }}</td>
-                                <td>{{ $slider->show }}</td>
+                                <td class="position">
+									{!! $slider->background_image !!}
+									<span class="position-{{ $slider->text_position }}">
+									</span>
+								</td>
+                                <td>{!! $slider->text_position_label !!}</td>
+                                <td>
+									<input 
+										class="show"
+										type="checkbox" 
+										name="show" 
+										value="{{ $slider->show }}"
+										data-show="{{ $slider->show }}"
+										data-url="{{ route('admin.slider.update', $slider) }}"
+										@if($slider->show == 'true') {{ 'checked' }} @endif
+									>
+								</td>
                                 <td>{{ $slider->order }}</td>
                             </tr>
 							@php 
