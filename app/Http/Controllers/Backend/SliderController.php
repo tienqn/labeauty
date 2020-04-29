@@ -41,21 +41,17 @@ class SliderController extends Controller
     }
 
     /**
-     * @param ManageBookingRequest $request
-     * @param LbBooking         $booking
+     * @param ManageSliderRequest $request
+     * @param LbSlider         $booking
      *
      * @return mixed
      */
-    public function show(ManageBookingRequest $request, LbBooking $booking)
+    public function show(ManageSliderRequest $request, LbSlider $slider)
     {
-		if (!$booking->is_read) {
-			$booking->is_read = true;
-			$booking->save();
-		}
 
-        return view('backend.booking.show')
-            ->withBooking($booking->load('service'))
-			->withIsActive(true);
+        return view('backend.slider.show')
+            ->withSlider($slider)
+			->withIsSliderActive(true);
     }
 
     /**
@@ -68,15 +64,46 @@ class SliderController extends Controller
      */
     public function update(UpdateSliderRequest $request, LbSlider $slider)
     {
-        $this->sliderRepository->update($slider, $request->only(
-            'is_show'
-		));
-	
+        $this->sliderRepository->update($slider, $request->all());
 		if ($request->ajax()) {
 			return response()->json(true);
 		}
 
         return redirect()->route('admin.slider.index')->withFlashSuccess(__('alerts.backend.slider.updated'));
+    }
+
+    /**
+     * @param UpdateSliderRequest $request
+     * @param LbSlider              $slider
+     *
+     * @throws \App\Exceptions\GeneralException
+     * @throws \Throwable
+     * @return mixed
+     */
+    public function updateBanner(Request $request, LbSlider $slider)
+    {
+
+		$validator = \Illuminate\Support\Facades\Validator::make($request->all(), [
+			'background' => 'dimensions:width=1920,height=900',
+		]);
+
+		if ($validator->fails()) {    
+			return response()->json([
+				'error' => true,
+				'message' => 'Banner phải có tỉ lệ chính xác 1920 X 900'
+			]);
+		}
+
+		$imageName = time() . '_' . $request->background->getClientOriginalName();
+
+		$request->background->move(public_path('theme/img'), $imageName);
+
+		$slider->background = 'theme/img/' . $imageName;
+		$slider->save();
+		
+		return response()->json([
+			'error' => false,
+			]);
     }
 
     /**

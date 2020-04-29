@@ -50,12 +50,25 @@ class SliderRepository extends BaseRepository
     public function update(LbSlider $slider, array $data): LbSlider
     {
 		return DB::transaction(function () use ($slider, $data) {
-            if ($slider->update([
-                'show' => $data['is_show'] ? 'false' : 'true'
-            ])) {
+			if (isset($data['is_show'])) {
 
-                return $slider;
-            }
+				if ($slider->update([
+					'show' => $data['is_show'] ? 'false' : 'true'
+				])) {
+	
+					return $slider;
+				}
+			}
+
+			if (isset($data['text_position'])) {
+
+				if ($slider->update([
+					'text_position' => $data['text_position']
+				])) {
+	
+					return $slider;
+				}
+			}
 
             throw new GeneralException(__('exceptions.backend.access.slider.update_error'));
         });

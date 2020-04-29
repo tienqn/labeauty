@@ -41,12 +41,11 @@
                         @foreach($sliders as $slider)
                             <tr>
                                 <td>{{ $stt }}</td>
-                                <td><a href="{{ route('admin.booking.show', $slider) }}">{{ $slider->title }}</a></td>
+                                <td><a href="{{ route('admin.slider.show', $slider) }}">{{ $slider->title }}</a></td>
                                 <td>{{ $slider->description }}</td>
                                 <td class="position">
 									{!! $slider->background_image !!}
-									<span class="position-{{ $slider->text_position }}">
-									</span>
+									<span class="position-{{ $slider->text_position }}"></span>
 								</td>
                                 <td>{!! $slider->text_position_label !!}</td>
                                 <td>

@@ -16,5 +16,6 @@ Route::group([
 	Route::group(['prefix' => '{slider}'], function () {
 		Route::get('/', [SliderController::class, 'show'])->name('show');
 		Route::patch('/', [SliderController::class, 'update'])->name('update');
+		Route::post('/update_banner', [SliderController::class, 'updateBanner'])->name('update_banner');
 	});
 });
