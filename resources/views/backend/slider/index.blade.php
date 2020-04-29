@@ -61,7 +61,7 @@
         <div class="row">
             <div class="col-7">
                 <div class="float-left">
-                    {!! $sliders->total() !!} {{ trans_choice('labels.backend.access.booking.table.total', $sliders->total()) }}
+                    {!! $sliders->total() !!} {{ trans_choice('banner', $sliders->total()) }}
                 </div>
             </div><!--col-->
 
