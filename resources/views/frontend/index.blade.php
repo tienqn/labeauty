@@ -7,14 +7,16 @@
 <section id="lb-slider" class="beautypress-welcome-section beautypress-welcome-section-v1 welcome-height-calc-minus">
 	<div class="beautypress-welcome-slider-wraper">
 		<div class="beautypress-welcome-slider owl-carousel">
-			<div class="beautypress-welcome-slider-item content-right beautypress-bg"
-				style="background-image: url(theme/img/slider-bg-3.png);">
+
+			@foreach($sliders as $slider)
+			<div class="beautypress-welcome-slider-item @if($slider->text_position == 'right') {{ 'content-right' }} @else {{ 'content-left' }} @endif beautypress-bg"
+				style='background-image: url({{ $slider->background }});'>
 				<div class="container">
 					<div class="beautypress-welcome-content-group">
 						<div class="beautypress-welcome-container">
 							<div class="beautypress-welcome-wraper">
-								<h2 class="color-pink">Mừng đại lễ 30/4</h2>
-								<h3 class="color-purple"><i>Trao gửi yêu thương. Ưu đãi lên đến 50%</i></h3>
+								<h2 class="color-pink">{{ $slider->title }}</h2>
+								<h3 class="color-purple"><i>{{ $slider->description }}</i></h3>
 								<!-- <p class="color-black">Allow our team of beauty specialists to help you prepare
 									for your wedding and enhance your special.</p>
 								<div class="beautypress-btn-wraper">
@@ -29,50 +31,8 @@
 					</div><!-- .beautypress-welcome-content-group END -->
 				</div>
 			</div><!-- .beautypress-welcome-slider-item END -->
-			<div class="beautypress-welcome-slider-item content-left beautypress-bg"
-				style="background-image: url(theme/img/slider-bg-1.png);">
-				<div class="container">
-					<div class="beautypress-welcome-content-group">
-						<div class="beautypress-welcome-container">
-							<div class="beautypress-welcome-wraper">
-								<h2 class="color-pink">MÓN QUÀ SẮC ĐẸP </h2>
-								<h3 class="color-purple"><i>Làm đẹp thả ga không lo về giá</i></h3>
-								<!-- <p class="color-black">Allow our team of beauty specialists to help you prepare
-									for your wedding and enhance your special.</p>
-								<div class="beautypress-btn-wraper">
-									<a href="#" class="xs-btn bg-color-pink round-btn box-shadow-btn">learn more
-										<span></span></a>
-									<a href="#"
-										class="xs-btn bg-color-purple round-btn box-shadow-btn">phurchase
-										<span></span></a>
-								</div> -->
-							</div>
-						</div><!-- .beautypress-welcome-container END -->
-					</div><!-- .beautypress-welcome-content-group END -->
-				</div>
-			</div><!-- .beautypress-welcome-slider-item END -->
-			<div class="beautypress-welcome-slider-item content-left beautypress-bg"
-				style="background-image: url(theme/img/slider-bg-2.png);">
-				<div class="container">
-					<div class="beautypress-welcome-content-group">
-						<div class="beautypress-welcome-container">
-							<div class="beautypress-welcome-wraper">
-								<h2 class="color-pink">ƯU ĐÃI TRẢ GÓP 0%</h2>
-								<h3 class="color-purple"><i>Không cần chứng minh thu nhập</i></h3>
-								<!-- <p class="color-black">Allow our team of beauty specialists to help you prepare
-									for your wedding and enhance your special.</p>
-								<div class="beautypress-btn-wraper">
-									<a href="#" class="xs-btn bg-color-pink round-btn box-shadow-btn">learn more
-										<span></span></a>
-									<a href="#"
-										class="xs-btn bg-color-purple round-btn box-shadow-btn">phurchase
-										<span></span></a>
-								</div> -->
-							</div>
-						</div><!-- .beautypress-welcome-container END -->
-					</div><!-- .beautypress-welcome-content-group END -->
-				</div>
-			</div><!-- .beautypress-welcome-slider-item END -->
+			@endforeach
+			
 		</div><!-- .beautypress-welcome-slider END -->
 	</div>
 </section><!-- .beautypress-welcome-section END -->
