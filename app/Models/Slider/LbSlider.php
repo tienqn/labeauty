@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Service;
+namespace App\Models\Slider;
 
 use App\Models\Slider\Traits\Relationship\SliderRelationship;
 use App\Models\Slider\Traits\Method\SliderMethod;

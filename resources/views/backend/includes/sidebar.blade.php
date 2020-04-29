@@ -25,6 +25,15 @@
 					@endif
 				</a>
             </li>
+			
+            <li class="nav-item">
+                <a class="nav-link {{
+                    active_class(Route::is('admin/slider*'))
+                }} " href="{{ route('admin.slider.index') }}">
+					<i class="nav-icon fa fa-calendar" aria-hidden="true"></i>
+                    @lang('Banner')
+				</a>
+            </li>
 
         {{--   @if ($logged_in_user->isAdmin())
                 <li class="nav-title">
