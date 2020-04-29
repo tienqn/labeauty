@@ -1,9 +1,9 @@
 @extends('backend.layouts.app')
 
-@section('title', app_name() . ' | ' . __('labels.backend.access.booking.management'))
+@section('title', app_name() . ' | ' . __('Quản lý banner'))
 
 @section('breadcrumb-links')
-    @include('backend.booking.includes.breadcrumb-links')
+    @include('backend.slider.includes.breadcrumb-links')
 @endsection
 
 @section('content')
@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-sm-5">
                 <h4 class="card-title mb-0">
-                    {{ __('labels.backend.access.booking.management') }}
+                    {{ __('Quản lý banner') }}
                 </h4>
             </div><!--col-->
 
@@ -26,32 +26,28 @@
                     <table class="table table-bordered table-hover lb-table">
                         <thead>
 							<tr class="lb-thead-tr">
-								<th>@lang('labels.backend.access.booking.table.id')</th>
-								<th>@lang('labels.backend.access.booking.table.name')</th>
-								<th>@lang('labels.backend.access.booking.table.phone_number')</th>
-								<th>@lang('labels.backend.access.booking.table.booking_time')</th>
-								<th>@lang('labels.backend.access.booking.table.booking_date')</th>
-								<th>@lang('labels.backend.access.booking.table.status')</th>
-								<th>@lang('labels.backend.access.booking.table.service')</th>
-								<th>@lang('labels.backend.access.booking.table.email')</th>
-								<th>@lang('labels.backend.access.booking.table.request')</th>
+								<th>@lang('STT')</th>
+								<th>@lang('Tiêu đề')</th>
+								<th>@lang('Mô tả')</th>
+								<th>@lang('Hình ảnh')</th>
+								<th>@lang('Vị trí chữ')</th>
+								<th>@lang('Hiển thị')</th>
+								<th>@lang('Sắp xếp')</th>
 							</tr>
                         </thead>
                         <tbody>
 						@php 
-							$stt = $bookings->total();
+							$stt = $sliders->total();
 						@endphp
-                        @foreach($bookings as $booking)
-                            <tr class="@if(!$booking->is_read) lb-not-seen @endif" data-href="{{ route('admin.booking.show', $booking) }}">
+                        @foreach($sliders as $slider)
+                            <tr data-href="{{ route('admin.booking.show', $slider) }}">
                                 <td>{{ $stt }}</td>
-                                <td>{{ $booking->name }}</td>
-                                <td>{{ $booking->phone_number }}</td>
-                                <td>{{ $booking->booking_time }}</td>
-                                <td>{{ $booking->booking_date_format }}</td>
-                                <td>{!! $booking->status_label !!}</td>
-                                <td>@if(!$booking->hasNotService()) {{ $booking->service->name }} @endif</td>
-                                <td>{{ $booking->email }}</td>
-                                <td>{{ $booking->request }}</td>
+                                <td>{{ $slider->title }}</td>
+                                <td>{{ $slider->description }}</td>
+                                <td>{{ $slider->background }}</td>
+                                <td>{{ $slider->text_position }}</td>
+                                <td>{{ $slider->show }}</td>
+                                <td>{{ $slider->order }}</td>
                             </tr>
 							@php 
 								$stt--;
@@ -65,13 +61,13 @@
         <div class="row">
             <div class="col-7">
                 <div class="float-left">
-                    {!! $bookings->total() !!} {{ trans_choice('labels.backend.access.booking.table.total', $bookings->total()) }}
+                    {!! $sliders->total() !!} {{ trans_choice('labels.backend.access.booking.table.total', $sliders->total()) }}
                 </div>
             </div><!--col-->
 
             <div class="col-5">
                 <div class="float-right">
-                    {!! $bookings->render() !!}
+                    {!! $sliders->render() !!}
                 </div>
             </div><!--col-->
         </div><!--row-->
