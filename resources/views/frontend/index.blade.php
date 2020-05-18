@@ -45,17 +45,16 @@
 			<div class="col-md-12 col-sm-12 col-lg-6 col-xl-6">
 				<div class="beautypress-new-about-text-gruop">
 					<div class="beautypress-sub-heading beautypress-watermark-title">
-						<h2 data-title="20+">20+ Years <br>of experience</h2>
+						<h2 data-title="10+">10+ năm <br>kinh nghiệm</h2>
 					</div><!-- .beautypress-sub-heading END -->
 					<span class="beautypress-gradient-separetor"></span>
-					<p>Passion, knowledge and the gift of beauty salon & spa continues to give the best services
-						in the world.</p>
-					<div class="beautypress-btn-wraper">
+					<p>Đam mê và kiến ​​thức La Beauty tiếp tục cung cấp các dịch vụ tốt nhất trên thế giới.</p>
+					<!-- <div class="beautypress-btn-wraper">
 						<a href="#" class="xs-btn round-btn box-shadow-btn bg-color-purple">
 							Appointment Now
 							<span></span>
 						</a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
@@ -64,7 +63,7 @@
 						<div class="beautypress-new-single-about-img-group">
 							<div class="beautypress-new-single-about-img ">
 								<div class="beautypress-3d-project-card">
-									<img src="theme/img/about-new-img-1.png" alt="">
+									<img src="theme/img/ceo/tacgia1.jpg" alt="">
 								</div>
 							</div><!-- .beautypress-new-single-about-img .beautypress-3d END -->
 						</div><!-- .beautypress-new-single-about-img-group END -->
@@ -72,7 +71,7 @@
 						<div class="beautypress-new-single-about-img-group">
 							<div class="beautypress-new-single-about-img beautypress-3d">
 								<div class="beautypress-3d-project-card">
-									<img src="theme/img/about-new-img-3.png" alt="">
+									<img src="theme/img/ceo/tacgia2.png" alt="">
 								</div><!-- .beautypress-3d-project-card END -->
 							</div><!-- .beautypress-new-single-about-img .beautypress-3d END -->
 						</div><!-- .beautypress-new-single-about-img-group END -->
@@ -82,7 +81,7 @@
 						<div class="beautypress-new-single-about-img-group">
 							<div class="beautypress-new-single-about-img beautypress-3d">
 								<div class="beautypress-3d-project-card">
-									<img src="theme/img/about-new-img-2.png" alt="">
+									<img src="theme/img/ceo/tacgia3.jpg" alt="">
 								</div><!-- .beautypress-3d-project-card END -->
 							</div><!-- .beautypress-new-single-about-img .beautypress-3d END -->
 						</div><!-- .beautypress-new-single-about-img-group END -->
@@ -90,7 +89,7 @@
 						<div class="beautypress-new-single-about-img-group">
 							<div class="beautypress-new-single-about-img beautypress-3d">
 								<div class="beautypress-3d-project-card">
-									<img src="theme/img/about-new-img-4.png" alt="">
+									<img src="theme/img/ceo/tacgia4.jpg" alt="">
 								</div><!-- .beautypress-3d-project-card END -->
 							</div><!-- .beautypress-new-single-about-img .beautypress-3d END -->
 						</div><!-- .beautypress-new-single-about-img-group END -->
